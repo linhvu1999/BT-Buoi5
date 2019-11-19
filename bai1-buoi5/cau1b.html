@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai1-b</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+	<form id="form" onsubmit="return handleSubmit()"> 
+		<h1>Form Information</h1>
+		Họ tên: <input type="text" name="username" value="Mạnh" id="username" />
+		<br />
+		Tuổi: <input type="number" name="age" value="29" id="age" />
+		<br />
+		<input type="submit" style="margin: 5px 60px;" value="Hiển thị thông tin" />
+
+	</form>
+	<p id="result"></p>
+
+		<script type="text/javascript">
+			function handleSubmit() {
+				var name = document.getElementById('username').value;
+				var age = document.getElementById('age').value;
+
+				var result = '';
+				result += "<b>Tên vừa nhập : </b> " + name +"<b>";
+				result += "<br />";
+				result += "<b>Tuổi vừa nhập : </b>" + age +"<b>";
+
+				document.getElementById('result').innerHTML = result;
+				return false;
+			}
+		</script>
+
+</body>
+</html>

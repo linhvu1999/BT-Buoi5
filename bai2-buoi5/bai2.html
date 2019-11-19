@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai2</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        #email{
+            margin: 20px 0px;
+        }
+        #form{
+            margin: 30px;
+        }
+    </style>
+
+    <script language="javascript">
+    	function handleSubmit(username,email){
+    		// b1:lấy các giá trị cảu name và email
+    		var username = document.getElementById('username').value;
+    		var email = document.getElementById('email').value;
+            var show = "Tên vừa nhập :" +username;
+            show +="\n";
+            show +="Email vừa nhập :" +email;
+   
+    		//kiem tra dữ liệu có hợp lệ không
+    		if (username == ''){
+                    alert('Bạn chưa nhập tên đăng nhập');
+                }
+                else if (email == '')
+                {
+                    alert('Bạn chưa nhập email');
+                }
+                else{
+                    // alert('Dữ liệu hợp lệ, ta có thể chấp nhận submit form');
+                    alert(show);
+                    return true;
+                }
+             	
+                return false;
+    	}
+    </script>
+</head>
+<body>
+	<form id="form" onsubmit="return handleSubmit()">
+		<h1>Form Information</h1>
+		Họ tên: <input type="text" name="username" placeholder="Nhập tên của bạn" id="username" />
+		<br />
+		Email: <input type="text" name="email" placeholder="Nhập email của bạn" id="email" />
+		<br />
+		<input type="submit" style="margin: 5px 60px;" value="Show popup" />
+	</form>
+</body>
+</html>

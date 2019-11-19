@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai 3</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css"/>
+  	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/> 
+  	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+	<div class="h5">
+			<h5>Javascript Onsubmit Event Example</h5>
+		</div>
+	<form id="form" onsubmit="return handleSubmit()"> 
+
+		<div class="form-group">
+		    Name :<input type="name" class="form-control" id="name" value="Mạnh">
+	  	</div>
+
+		<div class="form-group">
+    		Email :<input type="email" class="form-control" id="email" value="nguyenvietmanh@gmail.com">
+  		</div>
+
+	  	<div class="form-group">
+	    	Contact No :<input type="phone" class="form-control" id="phone" value="098888888">
+	  	</div>
+
+		
+		<input type="submit" class="btn btn-warning btn-lg btn-block " value="Submit">
+	</form>
+	<p id="result"></p>
+
+		<script type="text/javascript">
+			function handleSubmit() {
+				var name = document.getElementById('name').value;
+				var email = document.getElementById('email').value;
+				var phone = document.getElementById('phone').value;
+
+				var result = '';
+				result += "Name :  " + name;
+				result += "<br />";
+				result += "Email : " + email ;
+				result += "<br />";
+				result += "Contact No:" +phone;
+				result += "<br />";
+
+				document.getElementById('result').innerHTML = result;
+				return false;
+			}
+		</script>
+		<script type="text/javascript">
+			alert();
+		</script>
+</body>
+</html>
